@@ -3,6 +3,7 @@ import google.generativeai as genai
 
 genai.config(api_key=os.getenv("GEMINI_API_KEY"))
 
+<<<<<<< HEAD
 model = genai.GenerativeModel("gemini-pro")
 
 def generate_slide_outline(prompt: str) -> str:
@@ -20,3 +21,9 @@ def generate_figure_description(title: str) -> str:
     response = model.generate_content(prompt)
     return response.text
 
+=======
+def generate_slide_outline(prompt: str) -> str:
+    model = genai.GenerativeModel("gemini-pro")
+    responce = model.generate_content(prompt)
+    return response.text
+>>>>>>> 42424105e54e502503ad368ab16fdf6012ab945c
